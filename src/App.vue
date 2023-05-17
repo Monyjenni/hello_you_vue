@@ -5,8 +5,7 @@
       <div class="child"></div>
     </div>
     <div id="button">
-      <button @click="changeColor">Change Color</button>
-      <p>Click on the button to change to background color!!!</p>
+      <button @click="changeColor">Change backgroundColor</button>
     </div>
   </div>
 </template>
