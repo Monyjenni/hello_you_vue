@@ -1,10 +1,12 @@
 <template>
-  <div id="app">
-    <HelloWorld msg="Hello Buddy" />
+  <div :style="{ backgroundColor: color, width: '2000px', height: '2000px' }">
+    <div id="app">
+      <HelloWorld msg="Hello Buddy" />
+      <div class="child"></div>
+    </div>
     <div id="button">
-      <button v-on:click="counter += 1">Change Color</button>
-
-      <p>The button has been clicked {{ counter }} times</p>
+      <button @click="changeColor">Change Color</button>
+      <p>Click on the button to change to background color!!!</p>
     </div>
   </div>
 </template>
@@ -17,6 +19,24 @@ export default {
   components: {
     HelloWorld,
   },
+  data() {
+    return {
+      color: "pink",
+    };
+  },
+  methods: {
+    changeColor() {
+      //asign randomColor = hashtag to add with random math value and time with 12432343 then we floor
+      //floor means here is to asume to take the decimal number
+      //toString is to return a string to as a string
+      const randomColor =
+        "#" + Math.floor(Math.random() * 12432343).toString(16);
+
+      //update the color property with the new color
+      //this here is a constructor
+      this.color = randomColor;
+    },
+  },
 };
 </script>
 
@@ -24,16 +44,19 @@ export default {
 #app {
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 #button {
-  font-size: 20px;
+  font-size: 25px;
   border-radius: 15px;
   color: blueviolet;
   padding-bottom: 50px;
+  text-align: center;
 }
 #button button {
   font-size: 30px;
   border-radius: 15px;
+}
+.child {
+  margin-top: 200px;
 }
 </style>
