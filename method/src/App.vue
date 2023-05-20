@@ -3,7 +3,7 @@
   <h2>{{ 2+3+5 }}</h2>
   <h3>{{ 3+6+8}}</h3>
   <!-- inside curly braces__can call the method  -->
-  <h2>Add method- {{ add() }}</h2>
+  <h2>Add method- {{ add(10,4,5) }}</h2>
 </div>
 </template>
 
@@ -19,8 +19,9 @@ export default {
   },
   methods:{
     // is like a function
-    add(){
-      return 2+3+3+5
+    // a b c are paramter
+    add(a,b,c){
+      return a + b + c
     }
   }
 }
