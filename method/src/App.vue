@@ -1,15 +1,28 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <h1>Method</h1>
-  </div>
+  <div>
+  <h2>{{ 2+3+5 }}</h2>
+  <h3>{{ 3+6+8}}</h3>
+  <!-- inside curly braces__can call the method  -->
+  <h2>Add method- {{ add() }}</h2>
+</div>
 </template>
 
 <script>
 // import HelloWorld from './components/HelloWorld.vue'
 
 export default {
-  name: 'App'
+  name: 'App',
+  data(){
+    return{
+
+    }
+  },
+  methods:{
+    // is like a function
+    add(){
+      return 2+3+3+5
+    }
+  }
 }
 </script>
 
