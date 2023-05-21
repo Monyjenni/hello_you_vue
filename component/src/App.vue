@@ -1,17 +1,22 @@
 
 <template>
   <div id="app">
+    <!-- include greet into this app -->
+    <GreetMony/>
     <img alt="Vue logo" src="./assets/logo.png">
   </div>
 </template>
 
 <script>
 //component lets you beak down your application into small encapsulated parts which can then be composed to make more complex user interface
-// import HelloWorld from './components/HelloWorld.vue'
-
+//component is reusable means we can use diff properties and display diff information
+import GreetMony from './components/Greet.vue'
 export default {
   name: 'App',
-  
+  //specify Greet component
+  components: {
+    GreetMony,
+  } 
 }
 </script>
 
