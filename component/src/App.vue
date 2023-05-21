@@ -2,7 +2,9 @@
 <template>
   <div id="app">
     <!-- include greet into this app -->
-    <GreetMony/>
+    <GreetMony name="Jen" heroName="Batman"/>
+    <GreetMony name="Jennie" heroName="Superman"/>
+    <GreetMony name="Mony" heroName="WonderWoman"/>
     <img alt="Vue logo" src="./assets/logo.png">
   </div>
 </template>
@@ -14,6 +16,8 @@ import GreetMony from './components/Greet.vue'
 export default {
   name: 'App',
   //specify Greet component
+  //Props allows component content to be dynamic
+
   components: {
     GreetMony,
   } 
