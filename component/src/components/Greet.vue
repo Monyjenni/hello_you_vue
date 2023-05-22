@@ -1,5 +1,5 @@
 <template>
-<h2>Hello {{ name }}</h2>
+<h2>Hello {{ name }} a.k.a {{ heroName }}</h2>
 </template>
 
 <script>
@@ -9,7 +9,7 @@ export default {
     //name of comp
     //name is dynamic controll by this name props
     name: 'GreetMony',
-    props: ['name']
+    props: ['name','heroName']
 
 
 }
