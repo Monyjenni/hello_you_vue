@@ -1,5 +1,5 @@
 <template>
-<h2>Hello {{ name }} a.k.a {{ heroName }}</h2>
+<h2>Hello {{ name }} a.k.a {{ heroName }} ~~</h2>
 </template>
 
 <script>
