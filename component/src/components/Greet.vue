@@ -1,5 +1,8 @@
 <template>
+<div>
 <h2>Hello {{ name }} a.k.a {{ heroName }} ~~</h2>
+</div>
+
 </template>
 
 <script>
@@ -9,7 +12,12 @@ export default {
     //name of comp
     //name is dynamic controll by this name props
     name: 'GreetMony',
-    props: ['name','heroName']
+    props: ['name','heroName'],
+    computed :{
+        fullname () {
+            return `${this.firstName} ${this.lastName}`
+        }
+    }
 
 
 }

@@ -6,6 +6,7 @@
     <GreetMony name="Jennie" heroName="Superman"/>
     <GreetMony name="Mony" heroName="WonderWoman"/>
     <img alt="Vue logo" src="./assets/logo.png">
+    <PersonGreeting firstName="Jen" lastName="C"/>
   </div>
 </template>
 
@@ -13,6 +14,7 @@
 //component lets you beak down your application into small encapsulated parts which can then be composed to make more complex user interface
 //component is reusable means we can use diff properties and display diff information
 import GreetMony from './components/Greet.vue'
+import PersonGreeting from './components/PersonGreeting.vue';
 export default {
   name: 'App',
   //specify Greet component
@@ -20,7 +22,9 @@ export default {
 
   components: {
     GreetMony,
-  } 
+    PersonGreeting
+  } ,
+ 
 }
 </script>
 
