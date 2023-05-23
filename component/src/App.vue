@@ -7,6 +7,7 @@
     <GreetMony name="Mony" heroName="WonderWoman"/>
     <img alt="Vue logo" src="./assets/logo.png">
     <PersonGreeting firstName="Jen" lastName="C"/>
+    <ButtonVue/>
   </div>
 </template>
 
@@ -15,6 +16,7 @@
 //component is reusable means we can use diff properties and display diff information
 import GreetMony from './components/Greet.vue'
 import PersonGreeting from './components/PersonGreeting.vue';
+import ButtonVue from './components/ButtonVue.vue';
 export default {
   name: 'App',
   //specify Greet component
@@ -22,7 +24,8 @@ export default {
 
   components: {
     GreetMony,
-    PersonGreeting
+    PersonGreeting,
+    ButtonVue
   } ,
  
 }
