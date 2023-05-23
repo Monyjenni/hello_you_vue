@@ -7,7 +7,7 @@
     <GreetMony name="Mony" heroName="WonderWoman"/>
     <img alt="Vue logo" src="./assets/logo.png">
     <PersonGreeting firstName="Jen" lastName="C"/>
-    <ButtonVue/>
+    <ButtonVue btnText="hi from parent"/>
   </div>
 </template>
 
@@ -27,7 +27,8 @@ export default {
     PersonGreeting,
     ButtonVue
   } ,
- 
+  Props: ['btnText']
+  
 }
 </script>
 
