@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
     <h1>Props Practice</h1>
-    <p>Hiiii  I'm a {{ firstName}} {{ lastName }}</p>
+    <p>{{ firstName}} {{ lastName }}</p>
   </div>
 </template>
 

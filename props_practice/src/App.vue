@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <PropertiesVue :firstName="'Chansovanmony'" :lastName="'Yoeun'"/>
+    <PropertiesVue :firstName= 'firstName' :lastName= 'lastName'/>
   </div>
 </template>
 
@@ -11,6 +11,13 @@ import PropertiesVue from './components/props.vue'
 
 export default {
   name: 'App',
+  data(){
+    return {
+      firstName: 'Yoo',
+      lastName: 'Im Sensei'
+    }
+ 
+  },
   components: {
     PropertiesVue
   }
