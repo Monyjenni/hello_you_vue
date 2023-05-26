@@ -3,7 +3,7 @@
     <img alt="Vue logo" src="./assets/logo.png">
     <PropertiesVue :description= 'description' />
     <ButtonVue />
-    <p> {{ newName }}</p>
+    <p> {{ myName }}</p>
   </div>
 </template>
 
@@ -16,10 +16,9 @@ export default {
   name: 'App',
   data(){
     return {
-     description: "let's generate new name!",
-     newName: 'Casca'
+    description: "let's generate new name!",
+    myName: ''
     }
- 
   },
   components: {
     PropertiesVue,
