@@ -1,25 +1,29 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <PropertiesVue :firstName= 'firstName' :lastName= 'lastName'/>
+    <PropertiesVue :description= 'description' />
+    <ButtonVue />
+    <p> {{ newName }}</p>
   </div>
 </template>
 
 <script>
 
 import PropertiesVue from './components/props.vue'
+import ButtonVue from './components/button.vue'
 
 export default {
   name: 'App',
   data(){
     return {
-      firstName: 'Yoo',
-      lastName: 'Im Sensei'
+     description: "let's generate new name!",
+     newName: 'Casca'
     }
  
   },
   components: {
-    PropertiesVue
+    PropertiesVue,
+    ButtonVue
   }
 }
 </script>
