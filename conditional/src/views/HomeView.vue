@@ -28,8 +28,9 @@
     <eventButton @click="say('hello')">Say Hello</eventButton>
     <eventButton @click="say('bye')">Say bye</eventButton>
     
-    <!-- <h1>Passing Custom Argument to Event Handler Method ! </h1>
-    <p v-if="msg"> {{ msg}} </p> -->
+    <v-btn @click="warn('form cant be submitted.', $event)">Submit</v-btn>
+
+
   </div>
 </template>
 <script>
@@ -56,6 +57,12 @@
     },
     say(message) {
       //message is a parameter that represents the string passed to the say method when it is called.
+      alert(message)
+    },
+    warn (message,event) {
+      if(event) {
+        event.preventDefault();
+      }
       alert(message)
     }
   }
