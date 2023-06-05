@@ -16,6 +16,7 @@
     <div v-else>
       Not A/B/C
     </div>
+    <h2 v-show="ok"> Hello Mony !</h2>
 
   </div>
 </template>
@@ -26,5 +27,10 @@
     components: {
       buttonRendering
     },
+    data() {
+    return {
+      ok : true
+    }
+  },
   }
 </script>
