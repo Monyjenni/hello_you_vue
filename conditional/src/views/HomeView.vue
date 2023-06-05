@@ -27,8 +27,10 @@
     <eventButton @click="greet">Click me to greet</eventButton>
     <eventButton @click="say('hello')">Say Hello</eventButton>
     <eventButton @click="say('bye')">Say bye</eventButton>
+    
+    <!-- <h1>Passing Custom Argument to Event Handler Method ! </h1>
+    <p v-if="msg"> {{ msg}} </p> -->
   </div>
-
 </template>
 <script>
   import buttonRendering from '../components/Button'
@@ -44,15 +46,16 @@
       ok : true,
       // items : [{message : 'Foo'},{message: 'Bar'} ]
       count:0,
-      name : 'Jenn'
+      name : 'Jennie'
     }
   },
-  method : {
+  methods : {
     greet() {
       alert(`Hello ${this.name}`)
-      console.log("it's working ")
+      console.log("it's working ",name)
     },
     say(message) {
+      //message is a parameter that represents the string passed to the say method when it is called.
       alert(message)
     }
   }
