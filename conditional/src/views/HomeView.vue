@@ -28,7 +28,8 @@
     <eventButton @click="say('hello')">Say Hello</eventButton>
     <eventButton @click="say('bye')">Say bye</eventButton>
     
-    <v-btn @click="warn('form cant be submitted.', $event)">Submit</v-btn>
+    <v-btn @click="warn('form cant be submitted.', $event)">hi</v-btn>
+
 
 
   </div>
