@@ -16,8 +16,15 @@
     <div v-else>
       Not A/B/C
     </div>
-    <h2 v-show="ok"> Hello Mony !</h2>
-
+    <h2 v-show="ok"> This is V-show !</h2>
+    <h1>This is v-for</h1>
+    <!-- <li v-for="item in items">
+      {{ item.message }}
+    </li> -->
+    <h2>Inline Handler</h2>
+    <v-btn color="green" @click="count ++">Add 1</v-btn>
+    <p>The total count is :{{ count }}</p>
+    <v-btn @click="greet">Click me to greet</v-btn>
   </div>
 </template>
 <script>
@@ -29,8 +36,17 @@
     },
     data() {
     return {
-      ok : true
+      ok : true,
+      // items : [{message : 'Foo'},{message: 'Bar'} ]
+      count:0,
+      name : 'Jenn'
     }
   },
+  method : {
+    greet() {
+      alert(`Hello ${this.name}`)
+    }
+  
+  }
   }
 </script>
