@@ -24,15 +24,20 @@
     <h2>Inline Handler</h2>
     <v-btn color="green" @click="count ++">Add 1</v-btn>
     <p>The total count is :{{ count }}</p>
-    <v-btn @click="greet">Click me to greet</v-btn>
+    <eventButton @click="greet">Click me to greet</eventButton>
+    <eventButton @click="say('hello')">Say Hello</eventButton>
+    <eventButton @click="say('bye')">Say bye</eventButton>
   </div>
+
 </template>
 <script>
   import buttonRendering from '../components/Button'
+  import eventButton from '../components/EvenButton'
   export default {
     name: 'HomePage',
     components: {
-      buttonRendering
+      buttonRendering,
+      eventButton
     },
     data() {
     return {
@@ -45,8 +50,11 @@
   method : {
     greet() {
       alert(`Hello ${this.name}`)
+      console.log("it's working ")
+    },
+    say(message) {
+      alert(message)
     }
-  
   }
   }
 </script>
