@@ -29,6 +29,9 @@
     <eventButton @click="say('bye')">Say bye</eventButton>
     
     <v-btn @click="warn('form cant be submitted.', $event)">hi</v-btn>
+    <v-btn @click="doSomething">Click Me</v-btn>
+    <v-btn @click.prevent="doSomething">Prevent</v-btn>
+    <v-btn @click.once="doSomething">Once</v-btn>
 
 
 
@@ -65,6 +68,9 @@
         event.preventDefault();
       }
       alert(message)
+    },
+    doSomething() {
+      alert('hey')
     }
   }
   }
