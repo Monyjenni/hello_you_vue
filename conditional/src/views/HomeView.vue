@@ -16,6 +16,7 @@
     <div v-else>
       Not A/B/C
     </div>
+    <h1>------------------------------------------</h1>
     <h2 v-show="ok"> This is V-show !</h2>
     <h1>This is v-for</h1>
     <!-- <li v-for="item in items">
@@ -23,17 +24,22 @@
     </li> -->
     <h2>Inline Handler</h2>
     <v-btn color="green" @click="count ++">Add 1</v-btn>
+    <h1>------------------------------------------</h1>
     <p>The total count is :{{ count }}</p>
+    <h1>------------------------------------------</h1>
     <eventButton @click="greet">Click me to greet</eventButton>
     <eventButton @click="say('hello')">Say Hello</eventButton>
     <eventButton @click="say('bye')">Say bye</eventButton>
-    
+    <h1>------------------------------------------</h1>  
     <v-btn @click="warn('form cant be submitted.', $event)">hi</v-btn>
-    <v-btn @click="doSomething">Click Me</v-btn>
+    <v-btn @click.stop="doSomething">Click Me</v-btn>
     <v-btn @click.prevent="doSomething">Prevent</v-btn>
     <v-btn @click.once="doSomething">Once</v-btn>
-
-
+    <v-btn @click.self="doSomething">Self</v-btn>
+    <h1>------------------------------------------</h1>
+    <div @click.capture="handleClick">
+      <v-btn>Click me</v-btn>
+    </div>
 
   </div>
 </template>
@@ -71,6 +77,9 @@
     },
     doSomething() {
       alert('hey')
+    },
+    handleClick() {
+      console.log("clicked")
     }
   }
   }

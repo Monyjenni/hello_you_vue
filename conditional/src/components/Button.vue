@@ -6,7 +6,7 @@
     <h1 v-if="awesome">
       Mony is awesome
     </h1>
-    <h2 v-else>Oh Fucking No</h2>
+    <h2 v-else>Sheesh</h2>
   </div>
 </template>
 
