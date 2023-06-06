@@ -40,7 +40,14 @@
     <div @click.capture="handleClick">
       <v-btn>Click me</v-btn>
     </div>
-
+    <h1>------------------------------------------</h1>
+    <div @scroll.passive="onScroll">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus suscipit explicabo adipisci, odio voluptas maiores eius ratione enim debitis sapiente provident dignissimos expedita minus sed laborum animi cumque! Excepturi, quis.</p>
+    </div>
+    <h1>------------------------------------------</h1>
+    <ul>
+      <li v-for="item in items" v-bind:key="item.id">{{ item }}</li>
+    </ul>
   </div>
 </template>
 <script>
@@ -57,7 +64,8 @@
       ok : true,
       // items : [{message : 'Foo'},{message: 'Bar'} ]
       count:0,
-      name : 'Jennie'
+      name : 'Jennie',
+      items: ['apple','carrot','peach']
     }
   },
   methods : {
@@ -80,6 +88,9 @@
     },
     handleClick() {
       console.log("clicked")
+    },
+    onscroll () {
+      console.log('onscroll')
     }
   }
   }
