@@ -48,6 +48,10 @@
     <ul>
       <li v-for="item in items" v-bind:key="item.id">{{ item }}</li>
     </ul>
+    <h1>------------------------------------------</h1>
+    <li v-for="anime in animes" v-bind:key="anime.id">
+      {{ anime.message }}
+    </li>
   </div>
 </template>
 <script>
@@ -65,7 +69,9 @@
       // items : [{message : 'Foo'},{message: 'Bar'} ]
       count:0,
       name : 'Jennie',
-      items: ['apple','carrot','peach']
+      items: ['apple','carrot','peach'],
+      animes: [{message:'guts in nutshell'},{message:'I have no enemies!'}]
+
     }
   },
   methods : {
@@ -91,7 +97,8 @@
     },
     onscroll () {
       console.log('onscroll')
-    }
+    },
+
   }
   }
 </script>
